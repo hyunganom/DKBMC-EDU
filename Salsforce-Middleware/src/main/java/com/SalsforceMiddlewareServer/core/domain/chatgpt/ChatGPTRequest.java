@@ -1,8 +1,11 @@
 package com.SalsforceMiddlewareServer.core.domain.chatgpt;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class ChatGPTRequest {
     private String model; //사용할 GPT 모델의 이름.
     private List<GPTMessage> messages;
