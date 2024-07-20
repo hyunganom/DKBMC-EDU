@@ -13,13 +13,13 @@ public class RabbitMQAdapter {
 
     private final ReceiveMessageUseCase receiveMessageUseCase;
 
-    @RabbitListener(queues = "q.api") //큐에서 메시지를 수신
+    @RabbitListener(queues = "q.api") //큐에서 메시지를 수신 (salesforce)
     public void receiveMessage(String message) {
         log.info("Received message: {}", message);
         receiveMessageUseCase.receiveMessage(message);  // 메시지를 처리하도록 UseCase에 전달
     }
 
-    @RabbitListener(queues = "gptqueue")
+    @RabbitListener(queues = "gptqueue") //큐에서 메시지를 수신 (chatGPT)
     public void receiveGPTMessage(String message) {
         log.info("Received message from gptqueue: {}", message);
         receiveMessageUseCase.receiveGPTMessage(message);
