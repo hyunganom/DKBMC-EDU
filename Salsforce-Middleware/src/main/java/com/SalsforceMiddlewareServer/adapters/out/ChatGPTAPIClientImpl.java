@@ -21,3 +21,7 @@ public class ChatGPTAPIClientImpl implements ChatGPTAPIClient {
         return restTemplate.postForObject(apiURL, request, ChatGPTResponse.class);
     }
 }
+//RestTemplate
+//-HTTP 통신을 위한 도구로 RESTful API 웹 서비스와 상호작용을 쉽게 외부 도메인에서 데이터를 가져오거나 전송할 때 쓰는 클래스
+// - postForObject() : POST 요청에 대한 결과를 객체로 반환한다.
+//

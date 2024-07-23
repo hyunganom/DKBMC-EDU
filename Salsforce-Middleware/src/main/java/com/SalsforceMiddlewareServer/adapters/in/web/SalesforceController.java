@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @CrossOrigin //CORS 설정을 허용
 @RestController
-@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE) //기본 응답 미디어 타입을 JSON으로 설정(인터넷에 전달되는 파일 포맷 및 포맷 컨텐츠를 위한 식별자)
+//기본 응답 미디어 타입을 JSON으로 설정(인터넷에 전달되는 파일 포맷 및 포맷 컨텐츠를 위한 식별자)
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
 public class SalesforceController {
 
